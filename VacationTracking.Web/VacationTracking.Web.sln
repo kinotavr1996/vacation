@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationTracking.Web", "VacationTracking.Web.csproj", "{E686A9F1-49D5-440A-A466-9DA6C74A26B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationTracking.Repository.Implementation", "..\VacationTracking.Repository.Implementation\VacationTracking.Repository.Implementation.csproj", "{1024E44F-0854-48A2-9E6D-6B8EB20B54CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationTracking.Data.Common", "..\VacationTracking.Data.Common\VacationTracking.Data.Common.csproj", "{66CE81E8-53A6-420B-887D-92B4609E140D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationTracking.Data", "..\VacationTracking.Data\VacationTracking.Data.csproj", "{A867EEEC-B1DE-44F1-9882-CDC00E891A23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationTracking.Repository", "..\VacationTracking.Repository\VacationTracking.Repository.csproj", "{1DE6D81A-7650-405F-BC2E-1175829E4C46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationTracking.Data.Model", "..\VacationTracking.Data.Model\VacationTracking.Data.Model.csproj", "{4E6F134F-89DF-4568-861B-B445CC6D8584}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E686A9F1-49D5-440A-A466-9DA6C74A26B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E686A9F1-49D5-440A-A466-9DA6C74A26B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E686A9F1-49D5-440A-A466-9DA6C74A26B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E686A9F1-49D5-440A-A466-9DA6C74A26B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1024E44F-0854-48A2-9E6D-6B8EB20B54CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1024E44F-0854-48A2-9E6D-6B8EB20B54CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1024E44F-0854-48A2-9E6D-6B8EB20B54CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1024E44F-0854-48A2-9E6D-6B8EB20B54CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66CE81E8-53A6-420B-887D-92B4609E140D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CE81E8-53A6-420B-887D-92B4609E140D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CE81E8-53A6-420B-887D-92B4609E140D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CE81E8-53A6-420B-887D-92B4609E140D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A867EEEC-B1DE-44F1-9882-CDC00E891A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A867EEEC-B1DE-44F1-9882-CDC00E891A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A867EEEC-B1DE-44F1-9882-CDC00E891A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A867EEEC-B1DE-44F1-9882-CDC00E891A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE6D81A-7650-405F-BC2E-1175829E4C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE6D81A-7650-405F-BC2E-1175829E4C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE6D81A-7650-405F-BC2E-1175829E4C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE6D81A-7650-405F-BC2E-1175829E4C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6F134F-89DF-4568-861B-B445CC6D8584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6F134F-89DF-4568-861B-B445CC6D8584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6F134F-89DF-4568-861B-B445CC6D8584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6F134F-89DF-4568-861B-B445CC6D8584}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

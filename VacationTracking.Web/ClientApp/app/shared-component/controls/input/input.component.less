@@ -1,0 +1,39 @@
+@import "~assets/styles/common.less";
+:host {
+    input {
+        border: solid 2px #ebebeb;
+        font-size: 16px;
+        color: @gray1;
+        .placeholder(@gray1);
+        &:focus {
+            outline: none;
+            border: 2px solid @blue1;
+        }
+    }
+    &.invalid {
+        input {
+            border: 1px solid red;
+        }
+    }
+    .form-group {
+        padding: 10px 0;
+        position: relative;
+        >label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: @gray2;
+            margin-bottom: 10px;
+        }
+        &-error {
+            font-size: 13px;
+            color: red;
+            position: absolute;
+            bottom: -6px;
+        }
+        input {
+            padding: 5px 10px;
+            width: 100%;
+        }
+    }
+}

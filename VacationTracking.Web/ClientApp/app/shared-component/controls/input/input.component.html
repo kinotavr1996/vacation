@@ -1,0 +1,13 @@
+<div [class.invalid]="validator?.isValid" [class]=""form-group "+page">
+    <label>{{ label | localize }}</label>
+    <input *ngIf="type === "text"" [id]="name" [name]="name" type="text" [(ngModel)]="value" class="form-control" [placeholder]="placeholderValue"
+        (blur)="onBlur()" [disabled]="disabled">
+    <input *ngIf="type === "email"" [id]="name" [name]="name" type="email" [(ngModel)]="value" class="form-control" [placeholder]="placeholderValue"
+        (blur)="onBlur()" [disabled]="disabled">
+    <input *ngIf="type === "password"" type="password" [(ngModel)]="value" class="form-control" [placeholder]="placeholderValue"
+        (blur)="onBlur()" [disabled]="disabled">
+    <label for="name" class="login-icon" *ngIf="page==="login""></label>
+    <div class="form-group-error" [hidden]="validator?.isValid">
+        {{ validator?.message | localize }}
+    </div>
+</div>
