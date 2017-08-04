@@ -27,14 +27,18 @@ namespace VacationTracking.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public List<VacationPolicy> Get(Employee model)
         {
             return _vacationRepository.GetVacationPolicies().ToList();
         }
 
         [HttpPost]
-        [Authorize]
+        [Route("Edit/{id}")]
+        public HttpStatusCode Edit()
+        {
+            return HttpStatusCode.OK;
+        }
+        [HttpPost]
         public HttpStatusCode Post(VacationPolicy model)
         {
             if(model != null)

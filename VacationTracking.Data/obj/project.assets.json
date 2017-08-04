@@ -10137,10 +10137,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data\\VacationTracking.Data.csproj",
+      "projectUniqueName": "D:\\vacation\\Vacation\\VacationTracking.Data\\VacationTracking.Data.csproj",
       "projectName": "VacationTracking.Data",
-      "projectPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data\\VacationTracking.Data.csproj",
-      "outputPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data\\obj\\",
+      "projectPath": "D:\\vacation\\Vacation\\VacationTracking.Data\\VacationTracking.Data.csproj",
+      "outputPath": "D:\\vacation\\Vacation\\VacationTracking.Data\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -10148,14 +10148,14 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Common\\VacationTracking.Data.Common.csproj": {
-              "projectPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Common\\VacationTracking.Data.Common.csproj"
+            "D:\\vacation\\Vacation\\VacationTracking.Data.Common\\VacationTracking.Data.Common.csproj": {
+              "projectPath": "D:\\vacation\\Vacation\\VacationTracking.Data.Common\\VacationTracking.Data.Common.csproj"
             },
-            "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Model\\VacationTracking.Data.Model.csproj": {
-              "projectPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Model\\VacationTracking.Data.Model.csproj"
+            "D:\\vacation\\Vacation\\VacationTracking.Data.Model\\VacationTracking.Data.Model.csproj": {
+              "projectPath": "D:\\vacation\\Vacation\\VacationTracking.Data.Model\\VacationTracking.Data.Model.csproj"
             },
-            "D:\\Tasks\\10\\Vacation\\VacationTracking.Repository\\VacationTracking.Repository.csproj": {
-              "projectPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Repository\\VacationTracking.Repository.csproj"
+            "D:\\vacation\\Vacation\\VacationTracking.Repository\\VacationTracking.Repository.csproj": {
+              "projectPath": "D:\\vacation\\Vacation\\VacationTracking.Repository\\VacationTracking.Repository.csproj"
             }
           }
         }

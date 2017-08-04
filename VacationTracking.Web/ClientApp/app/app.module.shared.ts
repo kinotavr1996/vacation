@@ -1,3 +1,5 @@
+import { EmployeeModule } from './components/employee/employee.module';
+import { requestsRoutes } from './components/employee/employee.routing';
 import { HttpService } from './shared-component/services/http.service';
 import { AccountComponent } from './components/account/account.component';
 import { accountRoutes } from './components/account/account.routing';
@@ -23,10 +25,12 @@ export const sharedConfig: NgModule = {
     ],
     imports: [
         AccountModule,
+        EmployeeModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            ...accountRoutes
+            ...accountRoutes,
+            ...requestsRoutes
         ])
     ]
 };

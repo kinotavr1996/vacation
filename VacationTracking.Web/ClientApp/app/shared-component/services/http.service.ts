@@ -41,6 +41,7 @@ export class HttpService {
     */
     get(url: string, { headersRaw = null, showLoader = true }: HttpGetParams = {}) {
         const headers = this.prepareHeaders(headersRaw);
+        console.log(url);
         return this._http
             .get(AppConfig.apiUrl + url, { headers: headers })
             .map(response => {
@@ -105,13 +106,13 @@ export class HttpService {
         }
         if (error.status === 404) {
             console.log(error);
-            this._router.navigate(["/spa"]);
+            this._router.navigate(["/"]);
         }
         if (error.status === 401) {
             this._storage.removeItem(this._storage.keys.user);
             this._storage.removeItem(this._storage.keys.accessToken);
             this._storage.removeItem(this._storage.keys.expiresIn);
-            this._router.navigate(["/spa"]);
+            this._router.navigate(["/"]);
             return;
         }
     }

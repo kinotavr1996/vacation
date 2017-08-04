@@ -1,3 +1,4 @@
+import { RegistrationComponent } from './registration/registration.component';
 import { StorageService } from './../../shared-component/services/storage.service';
 import { AccountComponent } from './account.component';
 import { AccountHttpService } from './account-shared/account-http.service';
@@ -17,6 +18,7 @@ import { PagerService } from "../../shared-component/paginator/paginator.compone
     ],
     declarations: [
         LoginComponent,
+        RegistrationComponent,
         AccountComponent
     ],
     providers: [

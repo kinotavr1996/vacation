@@ -13,4 +13,12 @@ export class AccountHttpService {
         return this._httpService.get(AppConfig.urls.logout)
             .map(res => res);
     }
+    registration(data: any) {
+        return this._httpService.post(AppConfig.urls.registration, data)
+            .map(res => res);
+    }
+    getRequests(data: any) {
+        return this._httpService.get(AppConfig.urls.allRequests, data)
+            .map(res => res);
+    }
 }

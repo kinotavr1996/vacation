@@ -49,7 +49,7 @@ namespace VacationTracking.Data.Migrations
                     b.Property<string>("PasswordClear")
                         .IsRequired();
 
-                    b.Property<byte[]>("PasswordHash");
+                    b.Property<string>("PasswordHash");
 
                     b.Property<string>("Phone");
 

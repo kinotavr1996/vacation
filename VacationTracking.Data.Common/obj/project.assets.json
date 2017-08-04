@@ -10083,10 +10083,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Common\\VacationTracking.Data.Common.csproj",
+      "projectUniqueName": "D:\\vacation\\Vacation\\VacationTracking.Data.Common\\VacationTracking.Data.Common.csproj",
       "projectName": "VacationTracking.Data.Common",
-      "projectPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Common\\VacationTracking.Data.Common.csproj",
-      "outputPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Common\\obj\\",
+      "projectPath": "D:\\vacation\\Vacation\\VacationTracking.Data.Common\\VacationTracking.Data.Common.csproj",
+      "outputPath": "D:\\vacation\\Vacation\\VacationTracking.Data.Common\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

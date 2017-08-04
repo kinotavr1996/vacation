@@ -1,3 +1,4 @@
+import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account.component';
 import { ModuleWithProviders } from "@angular/core";
@@ -9,9 +10,10 @@ export const accountRoutes: Routes = [{
     component: AccountComponent,
     children: [
         { path: "", redirectTo: "login", pathMatch: "full" },
-        { path: "login", component: LoginComponent }
+        { path: "login", component: LoginComponent },
+        { path: "registration", component: RegistrationComponent }
     ]
 }];
 
 export const appRoutingProviders: any[] = [];
-export const booksRouting: ModuleWithProviders = RouterModule.forChild(accountRoutes);
+export const accountRouting: ModuleWithProviders = RouterModule.forChild(accountRoutes);

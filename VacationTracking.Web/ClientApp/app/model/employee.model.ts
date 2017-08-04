@@ -15,11 +15,11 @@ export class EmployeeModel {
             object["id"],
             object["email"],
             object["name"],
-            object["password"],
+            object["passwordHash"],
             object["surname"],
             object["roleId"],
-            object["StartDate"],
-            object["EndDate"]
+            object["startDate"],
+            object["endDate"]
         );
     }
     static fromJSONArray(array: Array<Object>): EmployeeModel[] {

@@ -3,4 +3,7 @@
     .body-content {
         padding-top: 50px;
     }
+    .container {
+        max-width: 250px;
+    }
 }

@@ -1,5 +1,7 @@
-import { AccountHttpService } from './../account-shared/account-http.service';
+import { Router } from '@angular/router';
 import { EmployeeModel } from './../../../model/employee.model';
+import { AccountHttpService } from './../account-shared/account-http.service';
+
 import { Component, Input, OnInit } from "@angular/core";
 import { PagerService } from "../../../shared-component/paginator/paginator.component";
 import "rxjs/add/operator/switchMap";
@@ -13,7 +15,8 @@ export class LoginComponent implements OnInit {
     isEditVisible: boolean = false;
     model: EmployeeModel;
     submitted = false;
-    constructor(private _httpService: AccountHttpService) { }
+    isLogined: boolean;
+    constructor(private _httpService: AccountHttpService, private router: Router) { }
 
     ngOnInit() {
         this.model = new EmployeeModel(null, null, null, null, null, null, null, null);
@@ -25,16 +28,18 @@ export class LoginComponent implements OnInit {
     login(data: any) {
         if (this.submitted) {
             this._httpService.login(data)
-                .subscribe(res => { this.ngOnInit(); });
+                .subscribe(res => {
+                    if (res.status == 200) {
+                        this.isLogined = true;
+                        console.log(JSON.parse(res._body));
+                        this.model = EmployeeModel.fromJSON(JSON.parse(res._body));
+                        console.log(this.model);
+                        this.router.navigateByUrl("/employee/list/" + this.model.id);
+                    }
+                    else {
+                        this.ngOnInit();
+                    }
+                });
         }
     }
-    logout() {
-        if (confirm("Are you shure ?")) {
-            this._httpService.logout()
-                .subscribe(res => { this.ngOnInit(); });
-        }
-    }
-
-
-
 }

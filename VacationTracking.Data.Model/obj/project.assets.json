@@ -8127,10 +8127,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Model\\VacationTracking.Data.Model.csproj",
+      "projectUniqueName": "D:\\vacation\\Vacation\\VacationTracking.Data.Model\\VacationTracking.Data.Model.csproj",
       "projectName": "VacationTracking.Data.Model",
-      "projectPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Model\\VacationTracking.Data.Model.csproj",
-      "outputPath": "D:\\Tasks\\10\\Vacation\\VacationTracking.Data.Model\\obj\\",
+      "projectPath": "D:\\vacation\\Vacation\\VacationTracking.Data.Model\\VacationTracking.Data.Model.csproj",
+      "outputPath": "D:\\vacation\\Vacation\\VacationTracking.Data.Model\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

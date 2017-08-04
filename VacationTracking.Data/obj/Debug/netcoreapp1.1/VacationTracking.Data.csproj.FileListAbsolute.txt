@@ -24,3 +24,16 @@ D:\Tasks\10\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTrack
 D:\Tasks\10\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Repository.pdb
 D:\Tasks\10\Vacation\VacationTracking.Data\obj\Debug\netcoreapp1.1\VacationTracking.Data.dll
 D:\Tasks\10\Vacation\VacationTracking.Data\obj\Debug\netcoreapp1.1\VacationTracking.Data.pdb
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Data.deps.json
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Data.dll
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Data.pdb
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Data.Common.dll
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Data.Model.dll
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Repository.dll
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Data.Model.pdb
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Data.Common.pdb
+D:\vacation\Vacation\VacationTracking.Data\bin\Debug\netcoreapp1.1\VacationTracking.Repository.pdb
+D:\vacation\Vacation\VacationTracking.Data\obj\Debug\netcoreapp1.1\VacationTracking.Data.csprojResolveAssemblyReference.cache
+D:\vacation\Vacation\VacationTracking.Data\obj\Debug\netcoreapp1.1\VacationTracking.Data.AssemblyInfo.cs
+D:\vacation\Vacation\VacationTracking.Data\obj\Debug\netcoreapp1.1\VacationTracking.Data.dll
+D:\vacation\Vacation\VacationTracking.Data\obj\Debug\netcoreapp1.1\VacationTracking.Data.pdb

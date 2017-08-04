@@ -10,6 +10,8 @@ using VacationTracking.Data.Models;
 using VacationTracking.Repository;
 using System.Security.Cryptography;
 using System.Text;
+using VacationTracking.Web.ViewModel;
+using VacationTracking.Data.Common;
 
 namespace VacationTracking.Controllers
 {
@@ -28,17 +30,16 @@ namespace VacationTracking.Controllers
             return HttpStatusCode.BadGateway;
         }
         [HttpGet]
-        [Route("/login")]
         public HttpStatusCode Login()
         {
             return HttpStatusCode.OK;
         }
 
         [HttpPost]
-        [Route("/Login")]
-        [ValidateAntiForgeryToken]
-        public HttpStatusCode Login(Employee model)
+        [Route("Login")]
+        public Employee Login([FromBody]LoginVM login)
         {
+            var model = new Employee { Email = login.Email, PasswordClear = login.Password };
             if (ModelState.IsValid)
             {
                 using (var md5 = MD5.Create())
@@ -49,27 +50,40 @@ namespace VacationTracking.Controllers
                 var user = _employeeRepository.GetEmployeeByLoginPassword(model.Email, model.PasswordHash);
                 if (user != null)
                 {
-                    Authenticate(model.Email); 
-                    return HttpStatusCode.OK;
+                    Authenticate(model.Email);
                 }
-                return HttpStatusCode.Unauthorized;
+                return user;
             }
-            return HttpStatusCode.Unauthorized;
+            return model;
         }
 
+        [Route("Logout")]
         public void Logout()
         {
             HttpContext.Authentication.SignOutAsync("Cookies");
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public HttpStatusCode Register(Employee model)
+        [Route("Registration")]
+        public HttpStatusCode Register([FromBody]RegistrationVM register)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return HttpStatusCode.Forbidden;
+            }
             if (ModelState.IsValid)
             {
+                var model = new Employee
+                {
+                    Name = register.Name,
+                    Surname = register.Surname,
+                    Email = register.Email,
+                    Phone = register.Phone,
+                    PasswordClear = register.Password,
+                    StartDate = DateTime.UtcNow,
+                    RoleId = (int)EmployeeType.HR
+                };
                 var user = _employeeRepository.GetByEmail(model.Email);
-
                 if (user == null)
                 {
                     using (var md5 = MD5.Create())
@@ -86,7 +100,7 @@ namespace VacationTracking.Controllers
             }
             return HttpStatusCode.Unauthorized;
         }
-       
+
         private void Authenticate(string userName)
         {
             var claims = new List<Claim>
@@ -97,6 +111,6 @@ namespace VacationTracking.Controllers
                 ClaimsIdentity.DefaultRoleClaimType);
             HttpContext.Authentication.SignInAsync("Cookies", new ClaimsPrincipal(id));
         }
-        
+
     }
 }

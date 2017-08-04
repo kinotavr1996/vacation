@@ -22,7 +22,21 @@
                         <span class='glyphicon glyphicon-education'></span> Login
                     </a>
                 </li>
-
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/account/logout']">
+                        <span class='glyphicon glyphicon-education'></span> Logout
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/account/registration']">
+                        <span class='glyphicon glyphicon-education'></span> Registration
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/employee/list/1']">
+                        <span class='glyphicon glyphicon-list'></span> Request list
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -1,0 +1,50 @@
+<br>
+<br>
+<p>
+    <button class="btn btn-primary" (click)="add();">Add request</button>
+</p>
+<br>
+
+<div class="request-list-container">
+    <table class="table table-responsive">
+        <thead class="table-header">
+            <th class="table-cell table-name">Name</th>
+            <th class="table-cell table-name" (click)="sort('startDate');">Start Date</th>
+            <th class="table-cell table-date" (click)="sort('endDate');">End Date</th>
+            <th class="table-cell table-status">Status</th>
+        </thead>
+        <tbody class="table-row" *ngFor="let request of model?.requestModel">
+            <tr>
+                <td>{{request?.name}}</td>
+                <td>{{request?.startDate | date: "dd/MM/yyyy"}}</td>
+                <td>{{request?.endDate | date: "dd/MM/yyyy"}}</td>
+                <td>{{request?.approved}}</td>
+                <td> <span *ngFor="let employee of request?.employeeModel">{{employee.Name}} {{employee.Surname}}</span> </td>
+                <td>
+                    <a [routerLink]="[' ../ ', request.id, 'edit']">Edit</a> |
+                    <a (click)="delete(request.id)">Delete</a> |
+                    <a (click)="approve(request.id)">Approve</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="display:inline-block;">
+        <ul *ngIf="pager?.pages && pager?.pages?.length" class="pagination">
+            <li [ngClass]="{disabled:pager?.currentPage === 1}">
+                <a (click)="_setPage(1)">First</a>
+            </li>
+            <li [ngClass]="{disabled:pager?.currentPage === 1}">
+                <a (click)="_setPage(pager?.currentPage - 1)">Previous</a>
+            </li>
+            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager?.currentPage === page}">
+                <a (click)="_setPage(page)">{{page}}</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === model?.totalPage}">
+                <a (click)="_setPage(pager.currentPage + 1)">Next</a>
+            </li>
+            <li [ngClass]="{disabled:pager?.currentPage === model?.totalPage}">
+                <a (click)="_setPage(model?.totalPage)">Last</a>
+            </li>
+        </ul>
+    </div>
+</div>
